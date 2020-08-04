@@ -1,2 +1,2 @@
-# animated-cable
+# cable-animation
 Created with CodeSandbox
