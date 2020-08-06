@@ -37,19 +37,20 @@ const CablePath: FC<Props> = ({
   female
 }) => {
     const classes = useStyles();
-    const offset: number = female ? -10 : 5;
+    const offsetX: number = female ? -18 : 16;
     let initial: InitialI = {
         translateY, 
-        translateX: female ? translateX + 7 : translateX - 7
+        translateX: female ? translateX + 3 : translateX - 9
     }
-    let animate: AnimateI = { translateX: translateX + offset };
+    let animate: AnimateI = { translateX: translateX + offsetX };
 
     if (y) {
+        const offsetY = female ? 10 : -10;
         initial = {
           translateX, 
-          translateY: female ? translateY + 7 : translateY - 7
+          translateY: female ? translateY - 6 : translateY + 6
         };
-        animate = { translateY: translateY + offset }
+        animate = { translateY: translateY + offsetY }
     }
     return (
           <motion.path 
@@ -61,10 +62,11 @@ const CablePath: FC<Props> = ({
               initial={initial}
               animate={animate}
               transition={{
-                  duration: 1.1,
+                  duration: 1.8,
                   loop: Infinity,
-                  ease: 'linear',
-                  stiffness: 100,
+                  ease: 'easeOut',
+                  // delay: 1005
+                  // stiffness: 100,
               }}
           />
     );
