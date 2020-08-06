@@ -9,13 +9,9 @@ const useStyles = createUseStyles({
 const translateX = -32.04;
 const translateY = -26.04;
 
-interface InitialI {
+interface AnimationI {
   translateX: number;
   translateY: number;
-};
-interface AnimateI {
-  translateX?: number;
-  translateY?: number;
 };
 
 type Props = {
@@ -38,11 +34,11 @@ const CablePath: FC<Props> = ({
 }) => {
     const classes = useStyles();
     const offsetX: number = female ? -18 : 16;
-    let initial: InitialI = {
+    let initial: AnimationI = {
         translateY, 
         translateX: female ? translateX + 3 : translateX - 9
     }
-    let animate: AnimateI = { translateX: translateX + offsetX };
+    let animate: AnimationI = { translateX: translateX + offsetX, translateY };
 
     if (y) {
         const offsetY = female ? 10 : -10;
@@ -50,7 +46,7 @@ const CablePath: FC<Props> = ({
           translateX, 
           translateY: female ? translateY - 6 : translateY + 6
         };
-        animate = { translateY: translateY + offsetY }
+        animate = { translateY: translateY + offsetY, translateX }
     }
     return (
           <motion.path 
