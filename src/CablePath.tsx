@@ -36,7 +36,7 @@ const CablePath: FC<Props> = ({
     const offsetX: number = female ? -18 : 16;
     let initial: AnimationI = {
         translateY, 
-        translateX: female ? translateX + 3 : translateX - 9
+        translateX: female ? translateX + 5 : translateX - 9,
     }
     let animate: AnimationI = { translateX: translateX + offsetX, translateY };
 
@@ -58,11 +58,12 @@ const CablePath: FC<Props> = ({
               initial={initial}
               animate={animate}
               transition={{
-                  duration: 1.8,
-                  loop: Infinity,
-                  ease: 'easeOut',
-                  // delay: 1005
-                  // stiffness: 100,
+                //   duration: 1.8,
+                //   loop: Infinity,
+                //   ease: 'easeOut',
+                  ease: [0.7, 0.1, 0.1, 0.7],
+                  duration: 1.2,
+                  yoyo: Infinity,
               }}
           />
     );
