@@ -1,10 +1,5 @@
 import React, { FC } from "react";
-import { createUseStyles } from 'react-jss';
 import CablePath from "./CablePath";
-
-const useStyles = createUseStyles({
-  main: {fillRule:'evenodd'},
-});
 
 type Props = {
   id?: string;
@@ -20,7 +15,6 @@ const Cable: FC<Props> = ({
   id,
   y
 }) => {
-  const classes = useStyles();
   return (
       <g id={`animated-cable-${id}`}>
           <g id="malecable-3" data-name="malecable">
@@ -31,7 +25,6 @@ const Cable: FC<Props> = ({
               {/* gradient */}
               <CablePath
                   d={femalePathGradientD}
-                  className={classes.main}
                   fill={`url(#animatedplug-lg-${id}-male`}
                   y={y}
               />
@@ -42,16 +35,15 @@ const Cable: FC<Props> = ({
                   id={'path-2'+id}
                   dataName='path-2'
                   d={malePathD}
-                  female
+                  male
                   y={y}
               />
               <CablePath
                   id={'path-2'+id}
                   dataName='path-2'
                   fill={`url(#animatedplug-lg-${id}-female`}
-                  className={classes.main}
                   d={malePathD}
-                  female
+                  male
                   y={y}
               />
           </g>

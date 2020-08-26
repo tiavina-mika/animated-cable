@@ -3,14 +3,14 @@ import { createUseStyles } from 'react-jss';
 import Cable from "./Cable";
 
 const useStyles = createUseStyles({
-  cls1:{fill:'#010101' ,fillRule:'evenodd'},
-  cls6:{stroke:'#ececec',strokeWidth:0.71, fill:'#fff'},
-  cls7:{fill:'#9da9b7'},
-  cls10:{fill:'#09274b',opacity:0.4,isolation:'isolate'},
-  cls11:{fillRule:'evenodd'},
-  cls12:{fillRule:'evenodd', fill:'#fff'},
-  cls13:{stroke:'#e5e5e5',fill:'url(#animated-lg-square-center-icon)', fillRule:'evenodd'},
-  cls14:{fill:'url(#animated-lg-infinite-icon)', fillRule:'evenodd'},
+    cls1: { fill: '#010101', fillRule: 'evenodd' },
+    cls6: { stroke: '#ececec', strokeWidth: 0.71, fill: '#fff' },
+    cls7: { fill: '#9da9b7' },
+    cls10: { fill: '#09274b', opacity: 0.4, isolation: 'isolate' },
+    cls11: { fillRule: 'evenodd' },
+    cls12: { fillRule: 'evenodd', fill: '#fff' },
+    cls13: { stroke: '#e5e5e5', fill: 'url(#animated-lg-square-center-icon)', fillRule: 'evenodd' },
+    cls14: { fill: 'url(#animated-lg-infinite-icon)', fillRule: 'evenodd' },
 });
 
 const App = () => {
@@ -24,10 +24,10 @@ const App = () => {
       height="354.96" 
       viewBox="0 0 671.91 354.96">
         <defs>
-            <linearGradient id="animated-linear-gradient" x1="339.47" y1="-210.84" x2="339.47" y2="-210.31" gradientTransform="translate(-50556.45 -11697.06) rotate(45.11) scale(130.71 130.71)" gradientUnits="userSpaceOnUse">
+            {/* <linearGradient id="animated-linear-gradient" x1="339.47" y1="-210.84" x2="339.47" y2="-210.31" gradientTransform="translate(-50556.45 -11697.06) rotate(45.11) scale(130.71 130.71)" gradientUnits="userSpaceOnUse">
                 <stop offset="0" stopColor="#49b750"/>
                 <stop offset="1" stopColor="#15a74a"/>
-            </linearGradient>
+            </linearGradient> */}
             <linearGradient id="animatedplug-lg-left-female" x1="338.98" y1="-210.36" x2="338.98" y2="-209.85" gradientTransform="translate(-50559.3 -11684.87) rotate(45.09) scale(130.71 130.71)" xlinkHref="#animated-linear-gradient"/>
             <linearGradient 
                 id="animatedplug-lg-left-male" 
