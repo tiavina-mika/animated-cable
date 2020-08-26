@@ -11,13 +11,14 @@ const translateX = -32.04;
 const translateY = -26.04;
 
 const transition = {
-  //   duration: 1.8,
-    // loop: Infinity,
-  //   ease: 'easeOut',
-    ease: [0.7, 0.1, 0.1, 0.7],
-    duration: 1.2,
-    repeatDelay: 1.2,
-    yoyo: Infinity,
+    loop: Infinity,
+    // ease: 'easeInOut',
+    // ease: [1, 0.1, 0.1, 1],
+    ease: [.5,.51,.32,.86],
+    // ease: 'easeIn',
+    duration: 1,
+    repeatDelay: 2,
+    // yoyo: Infinity,
 };
 interface AnimationI {
   translateX: number;
@@ -58,7 +59,8 @@ const CablePath: FC<Props> = ({
     /** vertical cable */
     if (y) {
         const offsetY: number = male ? 10 : -10;
-        const positionX: number = male ? translateY - 0.2 : translateY;
+        const positionX: number = male ? translateX - 0.3 : translateX - 0.05;
+        // const positionX: number = male ? translateY - 0.2 : translateY;
         initial = {
             translateX: positionX,
             translateY: translateY + offsetY,
